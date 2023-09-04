@@ -7,7 +7,7 @@ import { UnLoginFilter } from './filter/unLogin.filter';
 import { CustomExceptionFilter } from './filter/custom-exception.filter';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
-const HOST = 5758
+const HOST = 3000
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
