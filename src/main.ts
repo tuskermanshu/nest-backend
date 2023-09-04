@@ -42,7 +42,7 @@ async function bootstrap() {
   app.useGlobalFilters(new UnLoginFilter());
 
   app.useGlobalFilters(new CustomExceptionFilter());
-  await app.listen(HOST);
+  await app.listen(HOST,'0.0.0.0');
 
 }
 bootstrap();
