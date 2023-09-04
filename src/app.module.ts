@@ -19,6 +19,7 @@ import { PermissionGuard } from './guard/permission.guard';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath:'.env',
       load: [configuration],
     }),
     // 数据库连接

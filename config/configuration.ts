@@ -1,5 +1,6 @@
 
 require('dotenv').config();
+
 console.log('环境变量', process.env.DATABASE_HOST);
 
 export default () => ({
