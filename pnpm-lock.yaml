@@ -35,6 +35,9 @@ dependencies:
   class-validator:
     specifier: ^0.14.0
     version: registry.npmmirror.com/class-validator@0.14.0
+  dotenv:
+    specifier: ^16.3.1
+    version: registry.npmmirror.com/dotenv@16.3.1
   js-yaml:
     specifier: ^4.1.0
     version: registry.npmmirror.com/js-yaml@4.1.0

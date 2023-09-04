@@ -7,6 +7,8 @@ import { UnLoginFilter } from './filter/unLogin.filter';
 import { CustomExceptionFilter } from './filter/custom-exception.filter';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
+const HOST = 5758
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
@@ -40,6 +42,7 @@ async function bootstrap() {
   app.useGlobalFilters(new UnLoginFilter());
 
   app.useGlobalFilters(new CustomExceptionFilter());
-  await app.listen(3000);
+  await app.listen(HOST);
+
 }
 bootstrap();

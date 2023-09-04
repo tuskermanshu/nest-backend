@@ -36,9 +36,6 @@ import { PermissionGuard } from './guard/permission.guard';
         entities: [User, Permission, Role],
         poolSize: 10,
         connectorPackage: 'mysql2',
-        extra: {
-          authPlugin: 'sha256_password',
-        },
       }),
       inject: [ConfigService],
     }),
