@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, VersioningType } from '@nestjs/common';
 import { AppModule } from './app.module';
 import { FormatResponseInterceptor } from './interceptor/format-response.interceptor';
 import { InvokeRecordInterceptor } from './interceptor/invoke-record.interceptor';
@@ -23,6 +23,13 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
 
   SwaggerModule.setup('api-doc', app, document);
+
+  // 设置 API 版本
+  // app.enableVersioning({
+  //   type: VersioningType.HEADER,
+  //   header: 'X-Api-Version',
+  //   defaultVersion: '1',
+  // });
 
   app.useGlobalPipes(new ValidationPipe());
 

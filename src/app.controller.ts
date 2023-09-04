@@ -1,4 +1,4 @@
-import { Controller, Get, SetMetadata } from '@nestjs/common';
+import { Controller, Get, SetMetadata, Version } from '@nestjs/common';
 import { AppService } from './app.service';
 import {
   RequireLogin,
@@ -24,10 +24,5 @@ export class AppController {
     console.log(username);
     console.log(userInfo);
     return 'aaa';
-  }
-
-  @Get('bbb')
-  bbb() {
-    return 'bbb';
   }
 }

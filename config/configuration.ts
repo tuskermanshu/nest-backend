@@ -1,3 +1,5 @@
+console.log('环境变量', process.env.DATABASE_HOST);
+
 export default () => ({
   port: parseInt(process.env.PORT, 10) || 3000,
   database: {
